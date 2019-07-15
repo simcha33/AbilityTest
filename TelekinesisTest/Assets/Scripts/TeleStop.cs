@@ -10,7 +10,7 @@ public class TeleStop : MonoBehaviour {
 		if (other.tag == "teleObject")
 		{
 			//GetComponent<Rigidbody>().
-			Player.teleStatus = "Ready"; 
+			Player.teleStatus = "ready"; 
 		}
 	}
 }

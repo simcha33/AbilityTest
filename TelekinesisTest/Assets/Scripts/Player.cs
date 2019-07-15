@@ -8,17 +8,17 @@ public class Player : MonoBehaviour {
 	public Transform telestop;
 
 	public GameObject teleStop; 
+
 	public static string teleStatus = "no"; 
 
 	public float Speed;
 
 	public GameObject currentObject; 
-	// Use this for initialization
+
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 
 		RaycastHit hit;

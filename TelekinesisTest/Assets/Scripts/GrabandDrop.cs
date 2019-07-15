@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class GrabandDrop : MonoBehaviour {
 
-	// Use this for initialization
-
 	GameObject grabbedObject; 
 	public GameObject teleStop; 
 	float grabbedObjectSize; //grabbedobjectSize
@@ -37,7 +35,7 @@ public class GrabandDrop : MonoBehaviour {
 		Vector3 target = position + Camera.main.transform.forward * grabRange; 
 
 		if(Physics.Linecast(position, target,out raycastHit) && (raycastHit.transform.CompareTag("teleObject"))){
-			return raycastHit.collider.gameObject;	
+			return raycastHit.collider.gameObject;	//maybe take the rigidbody here
 		}
 		else{
 			return null; 
@@ -124,4 +122,10 @@ public class GrabandDrop : MonoBehaviour {
 - Make it so when a object is grabbed it always faces towards you. So people with rigidbodys want get confused. 
 
  */
+
+
+ /*step 1: Check if there is something grabable when clicking
+   step 2: if there is make the object move towards the players position
+   step 3: if the player presses the launch button make the grabbed object fly backwards
+   */
 
